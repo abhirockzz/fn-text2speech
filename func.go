@@ -8,7 +8,6 @@ import (
 	"log"
 	"os"
 	"os/exec"
-	"time"
 
 	fdk "github.com/fnproject/fdk-go"
 )
