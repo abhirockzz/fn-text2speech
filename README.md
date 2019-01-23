@@ -19,4 +19,8 @@ The Go function
 
 ## Invoke (and listen..)
 
-`echo -n 'Hope you enjoyed this text to speech example using Oracle Functions' | fn invoke text2speech convert > op.wav && afplay op.wav` (this will work seamlessly on Mac)
+`echo -n 'Hope you enjoyed this text to speech example using Oracle Functions' | fn invoke text2speech convert > op.wav && afplay op.wav` 
+
+`echo -n 'That was dope!' | fn invoke text2speech convert > op.wav && afplay op.wav` 
+
+^^ (these work seamlessly on Mac)
