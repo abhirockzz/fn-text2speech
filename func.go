@@ -14,12 +14,10 @@ import (
 )
 
 func main() {
-	fdk.Handle(fdk.HandlerFunc(myHandler))
+	fdk.Handle(fdk.HandlerFunc(text2speech))
 }
 
-func myHandler(ctx context.Context, in io.Reader, out io.Writer) {
-	log.Println("invoked on", time.Now())
-
+func text2speech(ctx context.Context, in io.Reader, out io.Writer) {
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(in)
 	text := buf.String()
@@ -59,5 +57,4 @@ func myHandler(ctx context.Context, in io.Reader, out io.Writer) {
 	log.Println("Returning .wav bytes")
 
 	out.Write(speech)
-	//json.NewEncoder(out).Encode([]byte("hi there"))
 }
