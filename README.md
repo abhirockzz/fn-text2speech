@@ -9,6 +9,14 @@ The Go function
 - which converts the text into speech and saves it into `/tmp/output.wav` (this is deleted before the function exits)
 - the file is then read and the raw bytes are simply returned to the caller
 
+
+## Pre-requisites
+
+- Start by cloning this repository
+- Configure your functions development environment
+- Get latest Fn CLI - `curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh`
+- Switch to right context using `fn use context <context name>`
+
 ## Create an app
 
 `fn create app text2speech --annotation oracle.com/oci/subnetIds=<SUBNETS>`
